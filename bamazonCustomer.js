@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
   host: "127.0.0.1",
   port: 3306,
   user: "root",
-  password: "password",
+  password: "Pelf36stony!",
   database: "bamazon"
 });
 
@@ -29,8 +29,7 @@ function showMenu() {
 }
 
 function wouldLikeToBuy() {
-  inquirer
-    .prompt([
+  inquirer.prompt([
       {
       name: "askItem",
       type: "input",
@@ -41,10 +40,8 @@ function wouldLikeToBuy() {
         type: "input",
         message: "How many would you like ?"
       }
-    
     ])
     .then(function(answer) {
-
       var itemToBuy = answer.askItem; 
       var thisMany = answer.howMany; 
 
